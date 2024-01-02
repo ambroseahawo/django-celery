@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 celery = "*"
 redis = "*"
+django-celery-results = "*"
 
 [dev-packages]
 
