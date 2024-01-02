@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'django_celery_results',
+    'django_celery_beat',
     
     'tasks',
 ]
@@ -90,7 +91,10 @@ accept_content = ['application/json']
 result_serializer = 'json'
 task_serializer = 'json'
 timezone = 'UTC'
-result_backend = 'django-db'
+CELERY_RESULT_BACKEND = 'django-db'
+
+# CELERY BEAT
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
 
 # Password validation

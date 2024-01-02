@@ -12,6 +12,8 @@ app.conf.enable_utc = True
 # app.conf.update(timezone='')
 app.config_from_object(settings, namespace='CELERY')
 
+# app.conf.beat_schedule ={}
+
 app.autodiscover_tasks()
 
 @app.task(bind=True)
